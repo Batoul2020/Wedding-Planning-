@@ -1,0 +1,203 @@
+/*GENERAL STYLES */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #f7f7f7;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/*HEADER / NAV*/
+header {
+  background: #ffffff;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #444;
+}
+
+nav a {
+  margin-left: 25px;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+nav a:hover {
+  color: #e49ca3; /* soft wedding pink */
+}
+
+/*HERO SECTION*/
+.hero {
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+  z-index: 1;
+}
+
+.hero > div {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h2 {
+  font-size: 45px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.4);
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 600px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+/*SECTIONS*/
+section {
+  padding: 60px 40px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 30px;
+  color: #444;
+  font-weight: 600;
+}
+
+/*CARDS / SERVICES */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding-bottom: 60px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* CONTACT*/
+.contact-box {
+  background: #ffffff;
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+.contact-box h2 {
+  margin-bottom: 25px;
+}
+
+.contact-box i {
+  font-size: 22px;
+  margin-right: 10px;
+  color: #e49ca3;
+}
+
+.contact-box p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+/*FOOTER*/
+footer {
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+  color: #777;
+  font-size: 14px;
+  border-top: 1px solid #eee;
+}
+
+/*RESPONSIVE*/
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  nav a {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .hero h2 {
+    font-size: 35px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
